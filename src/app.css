@@ -1,7 +1,12 @@
-.product-container {
+.main-container {
     display: flex;
     gap: 32px;
     padding: 0 32px;
+}
+
+.product-container {
+    display: flex;
+    gap: 32px;    
 }
 
 @media (max-width: 850px) {
@@ -10,4 +15,6 @@
     }
 }
 
-
+.shopping-cart-container {
+    width: 24dvw;
+}
