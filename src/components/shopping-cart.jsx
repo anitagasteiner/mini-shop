@@ -6,6 +6,7 @@ class ShoppingCart extends Component {
         return <div className="shopping-cart-container">
             <h2>Shopping Cart</h2>
             { this.props.items.map(item => <div key={ item.name }>{ item.amount }x { item.name } { item.price } €</div>) }
+            Sum: { this.props.sum }
         </div>;
     }
 }

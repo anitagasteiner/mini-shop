@@ -6,12 +6,14 @@ import "./app.css";
 
 class App extends Component {
     state = { 
-        items: []
+        items: [],
+        sum: 0
      }
 
     addItem = (amount, name, price) => {
         let currentItems = this.state.items;
         let existingItem = this.state.items.find(item => item.name == name);
+        this.state.sum = this.state.sum + price;
         if(existingItem) {
             existingItem.amount++;
             existingItem.price = existingItem.price + price;
@@ -37,7 +39,7 @@ class App extends Component {
                         <Product onAdd={() => this.addItem(1, "Converse Heroes", 64.99)} title="Converse Heroes" img="shoes-heroes" alt="Converse with Comic Heroes" description="Converse shoes with comic heroes design."/>
                         <Product onAdd={() => this.addItem(1, "Sneakers", 75.99)} title="Sneakers" img="sneakers" alt="Blue and Beige Sneakers" description="Elegant sneakers in dark blue and beige."/>
                     </div>
-                    <ShoppingCart items={this.state.items}/>
+                    <ShoppingCart items={this.state.items} sum={this.state.sum}/>
                 </div>
             </React.Fragment>;
     }
