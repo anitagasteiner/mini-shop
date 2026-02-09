@@ -5,8 +5,15 @@ class ShoppingCart extends Component {
     render() { 
         return <div className="shopping-cart-container">
             <h2>Shopping Cart</h2>
-            { this.props.items.map(item => <div key={ item.name }>{ item.amount }x { item.name } { item.price } €</div>) }
-            Sum: { this.props.sum }
+
+            <ul class="list-group">
+                { this.props.items.map(item => <li class="list-group-item d-flex justify-content-left align-items-center shopping-cart-list-item" key={ item.name }>
+                    <span class="badge text-bg-primary rounded-pill">{ item.amount }</span>
+                    { item.name } <br/> { item.price } €
+                    </li>) }
+                <li class="list-group-item active text-end"><b>Total: { this.props.sum } €</b></li>
+            </ul>
+
         </div>;
     }
 }

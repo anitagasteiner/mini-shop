@@ -15,6 +15,10 @@
     }
 }
 
-.shopping-cart-container {
-    width: 24dvw;
+.shopping-cart-list-item {
+    gap: 8px;
 }
+
+/* .shopping-cart-container {
+    width: 24dvw;
+} */
