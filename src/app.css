@@ -6,19 +6,20 @@
 
 .product-container {
     display: flex;
-    gap: 32px;    
+    gap: 32px;
+    flex-direction: column;
 }
 
-@media (max-width: 850px) {
+@media (min-width: 850px) {
     .product-container {
-        flex-direction: column;
+        flex-direction: row;
     }
+}
+
+.shopping-cart-container {
+    display: none;
 }
 
 .shopping-cart-list-item {
     gap: 8px;
 }
-
-/* .shopping-cart-container {
-    width: 24dvw;
-} */
